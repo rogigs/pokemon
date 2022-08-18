@@ -13,7 +13,7 @@ const Card = ({ url, name }) => {
   return (
     <article>
       <p>{name}</p>
-      <img src={pokemon.sprites.front_default} alt={`Pokemon ${name}`} />
+      <img src={pokemon?.sprites?.front_default} alt={`Pokemon ${name}`} />
     </article>
   );
 };
