@@ -1,4 +1,3 @@
-/* eslint-disable */
 import axios from "axios";
 
 export const listPokemons = (offset = 10, limit = 10) =>
