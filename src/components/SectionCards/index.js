@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { listPokemons as listPokemonsService } from "../../services/pokeAPI";
 import Card from "../Card";
+import * as S from "./styles";
 
 const SectionCards = () => {
   const [listPokemons, setlistPokemons] = useState([]);
@@ -12,11 +13,11 @@ const SectionCards = () => {
   }, []);
 
   return (
-    <section>
+    <S.Wrapper>
       {listPokemons.map(({ name, url }) => (
         <Card name={name} url={url} />
       ))}
-    </section>
+    </S.Wrapper>
   );
 };
 

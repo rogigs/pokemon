@@ -3,7 +3,7 @@ import SectionPokemon from "../../components/SectionCards";
 
 const Home = () => (
   <div>
-    <h1>Pokemons</h1>
+    <h1 style={{ textAlign: "center" }}>Pokemons</h1>
     <SectionPokemon />
   </div>
 );
