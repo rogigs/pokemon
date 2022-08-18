@@ -3,10 +3,15 @@ import axios from "axios";
 export const listPokemons = (offset = 10, limit = 10) =>
   axios
     .get(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`)
-    .then(({ data }) => {
-      console.log("🚀 ~ file: index.js ~ line 8 ~ .then ~ data", data);
-      return data.results;
-    })
+    .then(({ data }) => data.results)
+    .catch((error) => {
+      console.error(error);
+    });
+
+export const getPokemons = (url) =>
+  axios
+    .get(url)
+    .then(({ data }) => data)
     .catch((error) => {
       console.error(error);
     });
